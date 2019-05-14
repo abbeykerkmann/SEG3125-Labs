@@ -1,76 +1,63 @@
-body, html{
-    height: 100%;
-    margin:0;
-    font-family: 'Questrial', sans-serif;
-    background-color: #ffffff;
-}
-  
-.clear-floats {
-    clear:both;
-}
-  
-.container {
-    max-width:960px;
-    width:calc(100% - 20px);
-    padding:0 10px;
-    margin:0 auto;
-}
-  
-.header {
-    background:#0aab10;
-}
-  
-.header .logo {
-    float:left;
-    width:20%;
-}
-  
-.header .logo img {
-    height:35px;
-}
-  
-.header .navigation {
-    float:right;
-    width:80%;
-    text-align:right;
-}
-  
-.header a {
-    color:white;
-    display:inline-block;
-    padding:20px 10px;
-    margin:0 10px;
-    text-decoration:none;
-    height: 35px;
-    line-height: 35px
-}
-  
-a.button {
-    display: inline-block;
-    background: #ffffff;
-    padding: 10px 20px;
-    border-radius: 5px;
-    text-decoration:none;
-    color: white;
+body {
+    font-family: 'Merienda';
+    font-size: 15px;
 }
 
-.gallery {
-    margin: 5px;
-    border: 1px, solid #cccccc;
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color:#0aab0f;
+}
+
+li {
     float: left;
-    width: 180px;
 }
 
-.gallery:hover {
-    border: 1px solid #777777
-}
-
-.gallery img {
-    width: 600px;
-    height: 400px;
-}
-
-.desc {
-    padding: 15px;
+li a {
+    display: block;
+    color: white;
+    font-size: 17px;
     text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+/* Change the link color to #111 (black) on hover */
+
+li a:hover {
+    background-color: darkgreen;
+}
+
+/* latin-ext */
+
+@font-face {
+    font-family: 'Merienda';
+    font-style: normal;
+    font-weight: 400;
+    src: local('Merienda'), local('Merienda-Regular_0_wt'), url(https://fonts.gstatic.com/s/merienda/v7/gNMHW3x8Qoy5_mf8uWMLMIqK_Q.woff2) format('woff2');
+    unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+
+/* latin */
+
+@font-face {
+    font-family: 'Merienda';
+    font-style: normal;
+    font-weight: 400;
+    src: local('Merienda'), local('Merienda-Regular_0_wt'), url(https://fonts.gstatic.com/s/merienda/v7/gNMHW3x8Qoy5_mf8uWMFMIo.woff2) format('woff2');
+    unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
+nav{
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background: white
+}
+
+.active {
+    background-color: darkgreen;
+    color: white;
 }
