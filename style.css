@@ -2,7 +2,7 @@ body, html {
     height: 100%;
     margin: 0;
     font-family: 'Avant Garde';
-    background-color: #0aab10;
+    background-color: white;
 }
 
 .header {
@@ -33,7 +33,7 @@ body, html {
 
 .header a {
     background: #0aab10;
-    color:#0aab10;
+    color:white;
     display:inline-block;
     padding:20px 10px;
     margin:0 10px;
@@ -48,7 +48,7 @@ a.button {
     padding: 10px 20px;
     border-radius: 5px;
     text-decoration:none;
-    color: #0aab10;
+    color: white;
 }
 
 .clear-floats {
