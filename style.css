@@ -3,94 +3,39 @@ body, html{
     margin:0;
     font-family: 'Questrial', sans-serif;
     background-color: #ffffff;
-  }
+}
   
-  .img-1, .img-2, .img-3, .img-4, .img-5, .img-6, .img-7, .img-8, .img-9 {
-  
-    position: relative;
-    background-attachment: fixed;
-    background-position: center center;
-    background-repeat: no-repeat;
-    background-size: cover;
-  
-  }
-  
-  .img-1 {
-    background-image: url("images/ian-dooley-280928.jpg");
-    min-height: 100%;
-  }
-  
-  .img-2 {
-    background-image: url("images/soragrit-wongsa-311182.jpg");
-    min-height: 100%;
-  }
-    
-  .img-3 {
-   background-image: url("images/rawpixel-com-267062.jpg");
-   min-height: 100%;
-  }
-  
-  .img-4 {
-   background-image: url("images/iwan-334323.jpg");
-   min-height: 100%;
-  }
-  
-  .img-5 {
-   background-image: url("images/rachael-crowe-62006.jpg");
-   min-height: 100%;
-  }
-  
-  .img-6 {
-   background-image: url("images/lian-jonkman-101457.jpg");
-   min-height: 100%;
-  }
-  
-  .img-7 {
-   background-image: url("images/pineapple-supply-co-100584.jpg");
-   min-height: 100%;
-  }
-  
-  .img-8 {
-   background-image: url("images/ian-dooley-281846.jpg");
-   min-height: 100%;
-  }
-  
-  .img-9 {
-   background-image: url("images/nik-macmillan-309702.jpg");
-   min-height: 100%;
-  }
-  
-  .clear-floats {
+.clear-floats {
     clear:both;
-  }
+}
   
-  .container {
+.container {
     max-width:960px;
     width:calc(100% - 20px);
     padding:0 10px;
     margin:0 auto;
-  }
+}
   
-  .header {
+.header {
     background:#0aab10;
-  }
+}
   
-  .header .logo {
+.header .logo {
     float:left;
     width:20%;
-  }
+}
   
-  .header .logo img {
+.header .logo img {
     height:35px;
-  }
+}
   
-  .header .navigation {
+.header .navigation {
     float:right;
     width:80%;
     text-align:right;
-  }
+}
   
-  .header a {
+.header a {
     color:white;
     display:inline-block;
     padding:20px 10px;
@@ -98,140 +43,13 @@ body, html{
     text-decoration:none;
     height: 35px;
     line-height: 35px
-  }
+}
   
-  a.button {
+a.button {
     display: inline-block;
     background: #ffffff;
     padding: 10px 20px;
     border-radius: 5px;
     text-decoration:none;
     color: white;
-  }
-  
-  .centered {
-    position: absolute;
-    left: 0;
-    top: 50%;
-    width: 100%;
-    text-align: center;
-    color: #000000;
-    opacity: 0.9
-  }
-  
-  .centered span.border {
-    border-style: solid;
-    border-width: 3px;
-    border-color: black;
-    background: white;
-    color: black;
-    padding: 18px;
-    font-size: 25px;
-    letter-spacing: 10px;
-  }
-  
-  .information {
-    color: black;
-    font-size: 30px;
-  }
-  
-  .centeredcontent {
-    position: absolute;
-    left: 0;
-    top: 40%;
-    height: 100%;
-    width: 100%;
-    text-align: center;
-    color: #000;
-  }
-  
-  .centeredcontent span.bordered {
-    border-style: solid;
-    border-width: 1px;
-    border-color: black;
-    background: white;
-    color: black;
-    padding: 10px;
-    font-size: 25px;
-    letter-spacing: 5px;
-  }
-  
-  .highlight {
-    font-weight: bold;
-      
-  }	
-  .size35 {
-    font-size: 35px;
-  }
-  .white {
-    color: white;
-    text-shadow:
-    -1px -1px 0 #000000,
-    1px -1px 0 #000000,
-    -1px 1px 0 #000000,
-    1px 1px 0 #000000;  
-  }
-  
-  .photo {
-    display: block;
-    margin: 0 auto;
-  }
-  
-  .social {
-    text-align:center;
-    position: relative;
-  }
-  
-  .footer {
-    position: relative;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    padding: 8px;
-    background-color: #000000;
-    text-align: right;
-    color: white;
-    text-decoration: none;
-  }
-  
-  .footer a {
-    color:white;
-    display:inline-block;
-    padding: 2px
-  }
-  
-  .footerpricing {
-    position: absolute;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    padding: 8px;
-    background-color: #000000;
-    text-align: right;
-    color: white;
-    text-decoration: none;
-  }
-  
-  .footerpricing a {
-    color:white;
-    display:inline-block;
-    padding: 2px
-  }
-  
-  .pricingouter {
-      display: table;
-      position: absolute;
-      height: 100%;
-      width: 100%;
-  }
-  
-  .pricingmiddle {
-      display: table-cell;
-      vertical-align: middle;
-  }
-  
-  .pricinginner {
-      margin-left: auto;
-      margin-right: auto; 
-      width: 100%
-  }
+}
