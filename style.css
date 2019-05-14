@@ -1,0 +1,56 @@
+body, html {
+    height: 100%;
+    margin: 0;
+    font-family: 'Avant Garde';
+    background-color: #0aab10;
+}
+
+.header {
+    background: #0aab10
+}
+
+.header .logo {
+    float: left;
+    width: 100%;
+}
+
+.header .logo img {
+    height: 50px;
+}
+
+.header .navigation {
+    float: right;
+    width: 80%;
+    text-align: right;
+}
+
+.container {
+    max-width:960px;
+    width:calc(100% - 20px);
+    padding:0 10px;
+    margin:0 auto;
+}
+
+.header a {
+    background: #0aab10;
+    color:#0aab10;
+    display:inline-block;
+    padding:20px 10px;
+    margin:0 10px;
+    text-decoration:none;
+    height: 35px;
+    line-height: 35px
+  }
+
+a.button {
+    display: inline-block;
+    background: #0aab10;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration:none;
+    color: #0aab10;
+}
+
+.clear-floats {
+    clear:both;
+}
