@@ -6,7 +6,8 @@ body {
 
 ul {
     list-style-type: none;
-    margin: 0;
+    text-align: center;
+    margin: auto;
     padding: 0;
     overflow: hidden;
     background-color: #0aab0f;
@@ -14,9 +15,12 @@ ul {
 
 li {
     float: left;
+    text-align: center;
+    margin: auto;
 }
 
 li a {
+    margin: auto;
     display: block;
     color: white;
     font-size: 17px;
@@ -45,16 +49,23 @@ li a {
     background-color: white;
 }
 
+a.button {
+    -webkit-appearance: button;
+    -moz-appearance: button;
+    appearance: button;
+    text-decoration: none;
+    color: initial;
+}
+
 /* Change the link color to #111 (black) on hover */
 
 li a:hover {
     background-color: darkgreen;
 }
 
-h3,h4,h5 {
+h3, h4, h5 {
     font-family: Calibri, Candara, Segoe, "Segoe UI", Optima, Arial, sans-serif;
 }
-
 
 img {
     max-width: 100%;
@@ -83,6 +94,8 @@ img {
 
 nav {
     position: fixed;
+    text-align: center;
+    margin: auto;
     top: 0;
     width: 100%;
     background: white
@@ -137,4 +150,66 @@ nav {
 .menu:hover {
     border: 1px solid #777777;
     background-color: white;
+}
+
+.container h2 {
+    padding-top: 30px;
+    font-weight: 300;
+}
+
+.btn, .btn-two {
+    margin: 9px;
+}
+
+a[class*="btn"] {
+    text-decoration: none;
+}
+
+.btn.large, .btn-two.large, .btn-effect.large {
+    padding: 20px 40px;
+    font-size: 22px;
+}
+.btn.small {
+    padding: 10px 20px;
+    font-size: 11px;
+}
+.btn.green, .btn-two.green {
+    background-color: #0aab0f;
+}
+
+.btn {
+    position: relative;
+    border: 0;
+    padding: 15px 25px;
+    display: inline-block;
+    text-align: center;
+    color: white;
+}
+
+.btn:active {
+    top: 4px;
+}
+
+.btn.green {
+    box-shadow: 0px 4px 0px green;
+}
+
+.btn.green:active {
+    box-shadow: 0 0 green;
+    background-color: green;
+}
+
+.ctr{
+    text-align: center;
+    background-image: url('images/amaya.jpg');
+    background-repeat: no-repeat;
+    border-radius: 20px;
+    width: 1000px;
+    height: 657px;
+    margin: auto;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
 }

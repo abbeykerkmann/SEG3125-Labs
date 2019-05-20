@@ -1,25 +1,79 @@
 <!DOCTYPE html>
 <html>
 
-    <head>
-        <title>University Restaurant</title>
-        <link rel="icon" href="images/logo.png">
-        <link rel="stylesheet" href="style.css">
-    </head>
+<head>
+    <title>University Restaurant</title>
+    <link rel="icon" href="images/logo.png">
+    <link rel="stylesheet" href="style.css">
+</head>
 
-    <body>
-        <nav class="nav">
-            <div>
-                <img src="images/logo.png">
-            </div>
-            <div>
-                <ul>
-                    <li style="float:right"> <a href="checkout.html">Shopping Cart</a> </li>
-                    <li style="float:right"> <a href="menu.html">Menu</a> </li>
-                    <li style="float:right"> <a href="restaurants.html">Restaurants</a> </li>
-                    <li style="float:right"> <a class="active" href="index.html">Welcome</a> </li>
-                </ul>
-            </div>
-        </nav>
-    </body>
+<body>
+    <nav class="nav">
+        <div>
+            <ul id="account">
+                <li> <img src="images/logo.png">
+                <li style="float:right"> <a href="index.html">Logout</a> </li>
+                <li style="float:right"> <a href="#">My account</a> </li>
+            </ul>
+        </div>
+        <div>
+            <ul>
+                <li style="float:right"> <a href="order.html">Shopping Cart</a> </li>
+                <li style="float:right"> <a href="menu.html">Menu</a> </li>
+                <li style="float:right"> <a href="restaurants.html">Restaurants</a> </li>
+                <li style="float:right"> <a class="active" href="index.html">Welcome</a> </li>
+            </ul>
+        </div>
+    </nav>
+    <div class="ctr">
+        <table
+            style="background-color:rgba(255, 255, 255, 0.726);height: 200px;width: 700px;margin: auto;position: absolute;top: 0;left: 0;right: 0;bottom: 0;color: black" >
+            <tr>
+                <td>
+                    <table cellspacing="14px" cellpadding="11px">
+                        <tr>
+                            <td>
+                                <label>
+                                    <h1>Find
+                                        <input type="text"
+                                            style="width: 300px;height: 50px;color:rgb(146, 146, 146);font-size:20px"
+                                            placeholder="BBQ ...">
+                            </td>
+                            <td>
+                                <h1>Near
+                                    <select type="text"
+                                        style="width: 120px;height: 50px;color:rgb(146, 146, 146);font-size:20px">
+                                        <option>Ottawa</option>
+                                        <option>Kanata</option>
+                                        <option>Nepean</option>
+                                        <option>Gatineau</option>
+                            </td>
+                        </tr>
+                    </table>
+            <tr>
+                <td>
+                    <table cellspacing="14px">
+                        <tr>
+                            <td>
+                                    <h2>For
+                                            <input type="radio" checked><label style="font-size: 15px;">Breakfast</label>
+                                            <input type="radio"><label style="font-size: 15px;">Launch</label>
+                                            <input type="radio"><label style="font-size: 15px;">Dinner</label>
+                                            <input type="radio"><label style="font-size: 15px;">Take-out</label>
+                                            <input type="radio"><label style="font-size: 15px;">Drinks
+                                            </td>
+                                            <td>
+                                                <a href="restaurants.html" class="btn green large">Search</a>
+                            </td>
+                        </tr>
+                    </table>
+                    
+
+            </tr>
+            </td>
+            </tr>
+        </table>
+    </div>
+</body>
+
 </html>

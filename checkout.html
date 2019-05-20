@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Shopping Cart</title>
+    <link rel="icon" href="images/logo.png">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <nav class="nav">
+        <div>
+            <ul id="account">
+                <li> <img src="images/logo.png">
+                <li style="float:right"> <a href="index.html">Logout</a> </li>
+                <li style="float:right"> <a href="#">My account</a> </li>
+
+            </ul>
+        </div>
+        <div>
+            <ul>
+                <li style="float:right"> <a href="order.html">Shopping Cart</a> </li>
+                <li style="float:right"> <a href="menu.html">Menu</a> </li>
+                <li style="float:right"> <a href="restaurants.html">Restaurants</a> </li>
+                <li style="float:right"> <a href="index.html">Home</a> </li>
+            </ul>
+        </div>
+    </nav>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br><br>
+    <table>
+            <tr>
+                <td style="width:580px;vertical-align:top;">
+                    <h2 style="color:darkgray"> Your Order From : </h2>
+                    <h1 style="color:#535353"> High Calorie Fast Food </h1><br>
+                </td>
+                <td style="width:570px;vertical-align:top;">
+                    <h2 style="color:darkgray"> Deliver to : <span><a href="#" style="font-size:15px;float:right">edit</a></span></h2>
+                    <h1 style="color:#535353"> 75 Laurier Ave E, Ottawa, ON K1N 6N5</h1><br>
+            </tr>
+        </table>
+    <hr>
+    <div class="table-container" style="width: 100%;overflow-y: auto;_overflow: auto;margin: 0 0 1em;">
+        <table cellspacing="20px" cellpadding="11px">
+            <tr>
+                <td style="width:700px">
+                    <!--Payment-->
+                    <h1>Payment Method</h1>
+                    <hr>
+                    <input type="radio" checked><label style="font-size: 20px;">Credit Card</label>
+                    <table style="width:500px">
+                        <tr style="height:70px">
+                            <td>
+                                <form>
+                                    <label>
+                                        <h2 style="font-size: 15px;">Owner</h2>
+                                    </label>
+                                    <input type="text" style="width: 300px">
+                                </form>
+                            </td>
+                            <td>
+                                <form>
+                                    <label>
+                                        <h2 style="font-size: 15px;">cvv</h2>
+                                    </label>
+                                    <input type="text">
+                                </form>
+                            </td>
+                        </tr>
+                        <tr style="height:70px">
+                            <td>
+                                <form>
+                                    <label>
+                                        <h2 style="font-size: 15px;">Card Number:</h2>
+                                    </label>
+                                    <input type="text" style="width: 300px">
+                                </form>
+                            </td>
+                        </tr>
+                        <tr style="height:70px">
+                            <td>
+                                <form>
+                                    <label>
+                                        <h2 style="font-size: 15px;">Expiration Date</h2>
+                                    </label>
+                                    <select>
+                                        <option value="01">January</option>
+                                        <option value="02">February </option>
+                                        <option value="03">March</option>
+                                        <option value="04">April</option>
+                                        <option value="05">May</option>
+                                        <option value="06">June</option>
+                                        <option value="07">July</option>
+                                        <option value="08">August</option>
+                                        <option value="09">September</option>
+                                        <option value="10">October</option>
+                                        <option value="11">November</option>
+                                        <option value="12">December</option>
+                                    </select>
+                                    <select>
+                                        <option> 2019</option>
+                                        <option> 2020</option>
+                                        <option> 2021</option>
+                                        <option> 2022</option>
+                                        <option> 2023</option>
+                                        <option> 2024</option>
+                                    </select>
+                            </td>
+                            <td>
+                                <br>
+                                <img src="images/visa.jpg" style="max-width: 40px">
+                                <img src="images/mastercard.jpg" style="max-width: 40px">
+                                <img src="images/amex.jpg" style="max-width: 40px">
+                            </td>
+                        </tr>
+                    </table>
+                    <br>
+                    <hr>
+                    <input type="radio"><label style="font-size: 20px;">Cash</label>
+                    <h2 style="font-size: 15px;">
+                        Service Fee:  CA$3.00
+                    </h2>
+                </td>
+                <!--Price-->
+                <td rowspan="10">
+                    <table style="width:250px;border:3px solid rgb(180, 180, 180)" cellspacing="14px">
+                        <tr>
+                            <td style="width:180px"> Subtotal </td>
+                            <td> CA$15.54 </td>
+                        </tr>
+                        <tr>
+                            <td style="width:180px"> Tax </td>
+                            <td> CA$2.02 </td>
+                        </tr>
+                        <tr>
+                            <td style="width:180px"> Delivery Fee </td>
+                            <td> CA$1.99 </td>
+                        </tr>
+                        <tr>
+                            <td style="width:180px"> Delivery Fee (Tax) </td>
+                            <td> CA$0.26 </td>
+                        </tr>
+                        <tr>
+                            <td style="width:180px">
+                                <hr>Total </td>
+                            <td>
+                                <hr>CA$16.48 </td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <hr>
+    <br>
+    <a href="#" class="btn green large">Place Order</a>
+
+
+
+</body>
+
+</html>
