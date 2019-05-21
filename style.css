@@ -202,10 +202,9 @@ a[class*="btn"] {
 
 .ctr{
     text-align: center;
-    background-image: url('images/amaya.jpg');
+    background-image: url('images/foods.jpg');
     background-repeat: no-repeat;
     border-radius: 20px;
-    width: 1000px;
     height: 657px;
     margin: auto;
     position: absolute;
