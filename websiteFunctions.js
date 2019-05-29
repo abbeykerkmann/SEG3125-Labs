@@ -22,7 +22,7 @@ function calcCostAfterTax() {
 	costAfterTax = totalCost + tax;
 }
 
-function addToCart(var name, var price) {
+function addToCart(name, price) {
 	var item = new Object();
 	item.name = name;
 	item.price = price;
