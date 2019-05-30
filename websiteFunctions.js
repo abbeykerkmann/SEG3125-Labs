@@ -46,3 +46,7 @@ function removeFromCart(name) {
 	}
 	return;
 }
+
+function displayNumItems() {
+	window.alert('(' + numItems + ')');
+}
