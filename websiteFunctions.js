@@ -27,5 +27,22 @@ function addToCart(name, price) {
 	item.name = name;
 	item.price = price;
 	shoppingCart.push(item);
-	
+	numItem++;
+}
+
+function removeFromCart(name) {
+	for(var i = 0; i < shoppingCart.length(); i++) {
+		if(shoppingCart[i].name == name) {
+			var newList = [];
+			for(var j = 0; j < i; j++) {
+				newList.push(shoppingCart[j]);
+			}
+			for(var j = i + 1; j < shoppingCart.length(); j++) {
+				newList.push(shoppingCart[j]);
+			}
+			shoppingCart = newList.slice();
+			break;
+		}
+	}
+	return;
 }
