@@ -29,32 +29,62 @@
             </ul>
         </div>
     </nav>
-    <div class="menublock">
-        <h1 id="demo">Available Items</h1>
-        <div class="menu">
-            <div class="desc">
-                <h2 style="font-size:17px">Egg McMuffin Extra Value Meal</h2>
-                <ul>
-                    <li>450 Cals </li>
-                    <li>$6.39</li>
-                </ul>
-                <br>
-                <a class="btn green small" onclick="addToCart(1,5,6.39)">Add to
-                    cart</a>
+    <table>
+        <td style="width: 1000px">
+            <div class="menublock">
+                <h1 id="demo">Available Items</h1>
+                <div class="menu">
+                    <div class="desc">
+                        <h2 style="font-size:17px">Egg McMuffin Extra Value Meal</h2>
+                        <ul>
+                            <li>450 Cals </li>
+                            <li>$6.39</li>
+                        </ul>
+                        <br>
+                        <a class="btn green small" onclick="addToCart(1,5,6.39)">Add to
+                            cart</a>
+                    </div>
+                </div>
+                <div class="menu">
+                    <div class="desc">
+                        <h2 style="font-size:17px">Sausage 'N Egg McMuffin Extra Value Meal</h2>
+                        <ul>
+                            <li>590 Cals</li>
+                            <li>$6.49</li>
+                        </ul>
+                        <br>
+                        <a class="btn green small" onclick="addToCart(2,6,6.49)">Add to cart</a>
+                    </div>
+                </div>
             </div>
-        </div>
-        <div class="menu">
-            <div class="desc">
-                <h2 style="font-size:17px">Sausage 'N Egg McMuffin Extra Value Meal</h2>
-                <ul>
-                    <li>590 Cals</li>
-                    <li>$6.49</li>
-                </ul>
-                <br>
-                <a class="btn green small" onclick="addToCart(2,6,6.49)">Add to cart</a>
-            </div>
-        </div>
-    </div>
+        </td>
+        <td rowspan="10">
+            <table style="width:270px;border:3px solid rgb(180, 180, 180)" cellspacing="14px">
+                <tr>
+                    <td style="width:180px"> Subtotal </td>
+                    <td id="subtotal"> CA$0.0 </td>
+                </tr>
+                <tr>
+                    <td style="width:180px"> Tax </td>
+                    <td id="tax"> CA$0.0 </td>
+                </tr>
+                <tr>
+                    <td style="width:180px"> Delivery Fee </td>
+                    <td> CA$1.99 </td>
+                </tr>
+                <tr>
+                    <td style="width:180px"> Delivery Fee (Tax) </td>
+                    <td> CA$0.26 </td>
+                </tr>
+                <tr>
+                    <td style="width:180px">
+                        <hr><p>Total </td>
+                    <td>
+                        <hr><p id="total">CA$2.25 </td>
+                </tr>
+            </table>
+        </td>
+    </table>
 
 </body>
 
@@ -88,30 +118,39 @@
     }
 
     function addToCart(id, count, price) {
-        if (getCookie("item") == ""){
-            arrayToCookie("item",[id]);
-            arrayToCookie("count",[count]);
-            arrayToCookie("total",[price]);
-            return "";
+        // item, count and total are three entries of cookie
+        if (getCookie("item") == "") {
+            arrayToCookie("item", [id]);
+            arrayToCookie("count", [count]);
+            arrayToCookie("total", [price]);
+            var total_price = price;
         }
-        
-        var item_cookie= cookieToArray("item");
-        var count_cookie= cookieToArray("count");
-        var total_cookie= cookieToArray("total");
-        
-        total_cookie[0]=total_cookie[0]+price;
-        
-        var i= item_cookie.indexOf(id);
-        if (i!= -1) {
-            count_cookie[i] = count_cookie[i] + count;
-        }
+        // Read content, type array
         else {
-            item_cookie.push(id);
-            count_cookie.push(count);
+            var item_cookie = cookieToArray("item");
+            var count_cookie = cookieToArray("count");
+            var total_cookie = cookieToArray("total");
+
+            var total_price = total_cookie[0] + price;
+            total_cookie[0] = total_price;
+
+            var i = item_cookie.indexOf(id);
+            if (i != -1) {
+                count_cookie[i] = count_cookie[i] + count;
+            }
+            else {
+                item_cookie.push(id);
+                count_cookie.push(count);
+            }
+            arrayToCookie("item", item_cookie);
+            arrayToCookie("count", count_cookie);
+            arrayToCookie("total", total_cookie);
         }
-        
-        arrayToCookie("item",item_cookie);
-        arrayToCookie("count",count_cookie);
-        arrayToCookie("total",total_cookie);
+        document.getElementById("subtotal").innerHTML = "CA$"+total_price.toFixed(2);
+        document.getElementById("tax").innerHTML = "CA$"+(total_price*0.13).toFixed(2);
+        document.getElementById("total").innerHTML = "CA$"+(total_price*1.13+2.25).toFixed(2);
     }
+
+    
+
 </script>
