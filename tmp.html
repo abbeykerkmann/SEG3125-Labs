@@ -78,9 +78,13 @@
                 </tr>
                 <tr>
                     <td style="width:180px">
-                        <hr><p>Total </td>
+                        <hr>
+                        <p>Total
+                    </td>
                     <td>
-                        <hr><p id="total">CA$2.25 </td>
+                        <hr>
+                        <p id="total">CA$2.25
+                    </td>
                 </tr>
             </table>
         </td>
@@ -90,6 +94,18 @@
 
 </html>
 <script>
+    updatePrice();
+    function updatePrice() {
+        if (cookieToArray("total") != "") {
+            var total_price = cookieToArray("total")[0];
+        }
+        else {
+            var total_price = 0;
+        }
+        document.getElementById("subtotal").innerHTML = "CA$" + total_price.toFixed(2);
+        document.getElementById("tax").innerHTML = "CA$" + (total_price * 0.13).toFixed(2);
+        document.getElementById("total").innerHTML = "CA$" + (total_price * 1.13 + 2.25).toFixed(2);
+    }
     function clearCookie() {
         document.cookie = "item=; expires=Thu, 01 Jan 1970 00:00:00 GMT";
         document.cookie = "count=; expires=Thu, 01 Jan 1970 00:00:00 GMT";
@@ -123,7 +139,6 @@
             arrayToCookie("item", [id]);
             arrayToCookie("count", [count]);
             arrayToCookie("total", [price]);
-            var total_price = price;
         }
         // Read content, type array
         else {
@@ -131,8 +146,7 @@
             var count_cookie = cookieToArray("count");
             var total_cookie = cookieToArray("total");
 
-            var total_price = total_cookie[0] + price;
-            total_cookie[0] = total_price;
+            total_cookie[0] = total_cookie[0] + price;
 
             var i = item_cookie.indexOf(id);
             if (i != -1) {
@@ -146,11 +160,9 @@
             arrayToCookie("count", count_cookie);
             arrayToCookie("total", total_cookie);
         }
-        document.getElementById("subtotal").innerHTML = "CA$"+total_price.toFixed(2);
-        document.getElementById("tax").innerHTML = "CA$"+(total_price*0.13).toFixed(2);
-        document.getElementById("total").innerHTML = "CA$"+(total_price*1.13+2.25).toFixed(2);
+        updatePrice();
     }
 
-    
+
 
 </script>
