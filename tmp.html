@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Menu</title>
+    <link rel="icon" href="images/logo.png">
+    <link rel="stylesheet" href="style.css">
+    <script src='menu.js' type = 'text/javascript'></script>
+    <script src='shoppingCart.js' type = 'text/javascript'></script>
+</head>
+
+<body>
+    <nav class="nav">
+        <div>
+            <ul id="account">
+                <li> <img src="images/logo.png">
+                <li style="float:right"> <a href="index.html">Logout</a> </li>
+                <li style="float:right"> <a href="#">My account</a> </li>
+            </ul>
+        </div>
+        <div>
+            <ul>
+                <li style="float:right"> <a href="order.html">Shopping Cart</a> </li>
+                <li style="float:right"> <a class="active" href="menu.html">Menu</a> </li>
+                <li style="float:right"> <a href="restaurants.html">Restaurants</a> </li>
+                <li style="float:right"> <a href="index.html">Welcome</a> </li>
+                <li style="float:right">
+                    <button type="button" onclick="alert(document.cookie)">Show cookie</button>
+                    <button type="button" onclick="clearCookie()">clearCookie</button>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    <table>
+        <td style="width: 1000px">
+            <div class="menublock">
+                <h1 id="demo">Available Items</h1>
+                <div class="menu">
+                    <div class="desc">
+                        <h2 style="font-size:17px">Egg McMuffin Extra Value Meal</h2>
+                        <ul>
+                            <li>450 Cals </li>
+                            <li>$6.39</li>
+                        </ul>
+                        <br>
+                        <a class="btn green small" onclick="addToCart(1,1,6.39)">Add to
+                            cart</a>
+                    </div>
+                </div>
+                <div class="menu">
+                    <div class="desc">
+                        <h2 style="font-size:17px">Sausage 'N Egg McMuffin Extra Value Meal</h2>
+                        <ul>
+                            <li>590 Cals</li>
+                            <li>$6.49</li>
+                        </ul>
+                        <br>
+                        <a class="btn green small" onclick="addToCart(2,1,6.49)">Add to cart</a>
+                    </div>
+                </div>
+            </div>
+        </td>
+        <td rowspan="10">
+            <table style="width:270px;border:3px solid rgb(180, 180, 180)" cellspacing="14px">
+                <tr>
+                    <td style="width:180px"> Subtotal </td>
+                    <td id="subtotal"> CA$0.0 </td>
+                </tr>
+                <tr>
+                    <td style="width:180px"> Tax </td>
+                    <td id="tax"> CA$0.0 </td>
+                </tr>
+                <tr>
+                    <td style="width:180px"> Delivery Fee </td>
+                    <td> CA$1.99 </td>
+                </tr>
+                <tr>
+                    <td style="width:180px"> Delivery Fee (Tax) </td>
+                    <td> CA$0.26 </td>
+                </tr>
+                <tr>
+                    <td style="width:180px">
+                        <hr>
+                        <p>Total
+                    </td>
+                    <td>
+                        <hr>
+                        <p id="total">CA$2.25
+                    </td>
+                </tr>
+            </table>
+        </td>
+    </table>
+
+</body>
+
+</html>
+<script>
+    updatePrice();
+    
+
+
+
+</script>
