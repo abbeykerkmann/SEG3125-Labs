@@ -5,7 +5,8 @@
     <title>Shopping Cart</title>
     <link rel="icon" href="images/logo.png">
     <link rel="stylesheet" href="style.css">
-    <script src="websiteFucntions.js"></script>
+    <script src="shoppingCart.js"></script>
+    <script src="menu.js"></script>
 </head>
 
 <body>
@@ -24,6 +25,10 @@
                 <li style="float:right"> <a href="menu.html">Menu</a> </li>
                 <li style="float:right"> <a href="restaurants.html">Restaurants</a> </li>
                 <li style="float:right"> <a href="index.html">Welcome</a> </li>
+                <li style="float:right">
+                    <button type="button" onclick="alert(document.cookie)">Show cookie</button>
+                    <button type="button" onclick="clearCookie()">clearCookie</button>
+                </li>
             </ul>
         </div>
     </nav>
@@ -39,19 +44,82 @@
                 <h1 style="color:#535353"> High Calorie Fast Food </h1><br>
             </td>
             <td style="width:570px;vertical-align:top;">
-                <h2 style="color:darkgray"> Deliver to : <span><a href="#" style="font-size:15px;float:right">edit</a></span></h2>
+                <h2 style="color:darkgray"> Deliver to : <span><a href="#"
+                            style="font-size:15px;float:right">edit</a></span></h2>
                 <h1 style="color:#535353"> 75 Laurier Ave E, Ottawa, ON K1N 6N5</h1><br>
         </tr>
     </table>
     <hr>
+    <table>
+        <td style="width:1000px">
+            <table cellpadding="11px" style="background:#ffffffaf">
+                <tr>
+                    <td>
+                        <div id="header" style="background-color:#FF9900;">
+                            <h2 style="margin-bottom:0;color: #663300">&nbspHotdog</h2>
+                        </div>
+                        <div id="menu" style="width:150px;float:left;border-left:1px solid #eeeeee">
+
+                            <h4 style="color: #663300">&nbspQuantity:
+                                <select style="width:50px;color:#00830b">
+                                    <option style="color:#000000" value="1">1</option>
+                                    <option style="color:#000000" value="2">2</option>
+                                    <option style="color:#000000" value="3">3</option>
+                                    <option style="color:#000000" value="4">4</option>
+                                    <option style="color:#000000" value="5">5</option>
+                                    <option style="color:#000000" value="6">6</option>
+                                    <option style="color:#000000" value="7">7</option>
+                                </select></h4>
+                            <br>
+                        </div>
+                        <div id="footer" style="background-color:#FF9900;clear:both;text-align:right;font-size:20px">
+                            CA$5.56&nbsp</div>
+                    </td>
+                </tr>
+            </table>
+        </td>
+        <td>
+        <td rowspan="10">
+            <table style="width:270px;border:3px solid rgb(180, 180, 180)" cellspacing="14px">
+                <tr>
+                    <td style="width:180px"> Subtotal </td>
+                    <td id="subtotal"> CA$0.0 </td>
+                </tr>
+                <tr>
+                    <td style="width:180px"> Tax </td>
+                    <td id="tax"> CA$0.0 </td>
+                </tr>
+                <tr>
+                    <td style="width:180px"> Delivery Fee </td>
+                    <td> CA$1.99 </td>
+                </tr>
+                <tr>
+                    <td style="width:180px"> Delivery Fee (Tax) </td>
+                    <td> CA$0.26 </td>
+                </tr>
+                <tr>
+                    <td style="width:180px">
+                        <hr>
+                        <p>Total
+                    </td>
+                    <td>
+                        <hr>
+                        <p id="total">CA$2.25
+                    </td>
+                </tr>
+            </table>
+        </td>
+        </td>
+    </table>
     <br>
-    <script>
-        alert(numItems);
-    </script>
     <hr>
     <br>
     <a href="checkout.html" class="btn green large">Checkout</a>
 
 </body>
+<script>
+    updatePrice();
+    document.getElementById("content").innerHTML = "<table>2</table>";
+</script>
 
 </html>

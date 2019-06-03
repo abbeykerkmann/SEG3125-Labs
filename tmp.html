@@ -6,6 +6,7 @@
     <link rel="icon" href="images/logo.png">
     <link rel="stylesheet" href="style.css">
     <script src='menu.js' type = 'text/javascript'></script>
+    <script src='shoppingCart.js' type = 'text/javascript'></script>
 </head>
 
 <body>
@@ -42,7 +43,7 @@
                             <li>$6.39</li>
                         </ul>
                         <br>
-                        <a class="btn green small" onclick="addToCart(1,5,6.39)">Add to
+                        <a class="btn green small" onclick="addToCart(1,1,6.39)">Add to
                             cart</a>
                     </div>
                 </div>
@@ -54,7 +55,7 @@
                             <li>$6.49</li>
                         </ul>
                         <br>
-                        <a class="btn green small" onclick="addToCart(2,6,6.49)">Add to cart</a>
+                        <a class="btn green small" onclick="addToCart(2,1,6.49)">Add to cart</a>
                     </div>
                 </div>
             </div>
@@ -96,73 +97,7 @@
 </html>
 <script>
     updatePrice();
-    function updatePrice() {
-        if (cookieToArray("total") != "") {
-            var total_price = cookieToArray("total")[0];
-        }
-        else {
-            var total_price = 0;
-        }
-        document.getElementById("subtotal").innerHTML = "CA$" + total_price.toFixed(2);
-        document.getElementById("tax").innerHTML = "CA$" + (total_price * 0.13).toFixed(2);
-        document.getElementById("total").innerHTML = "CA$" + (total_price * 1.13 + 2.25).toFixed(2);
-    }
-    function clearCookie() {
-        document.cookie = "item=; expires=Thu, 01 Jan 1970 00:00:00 GMT";
-        document.cookie = "count=; expires=Thu, 01 Jan 1970 00:00:00 GMT";
-        document.cookie = "total=; expires=Thu, 01 Jan 1970 00:00:00 GMT";
-    }
-
-    function getCookie(cname) {
-        var name = cname + "=";
-        var ca = document.cookie.split(";");
-        for (var i = 0; i < ca.length; i++) {
-            var c = ca[i].trim();
-            if (c.indexOf(name) == 0) return c.substring(name.length, c.length);
-        }
-        return "";
-    }
-
-
-    function arrayToCookie(name, arrayIn) {
-        document.cookie = name + "=" + arrayIn;
-        return "";
-    }
-
-    function cookieToArray(name) {
-        var cookieContent = getCookie(name);
-        return eval("[" + cookieContent + "]");
-    }
-
-    function addToCart(id, count, price) {
-        // item, count and total are three entries of cookie
-        if (getCookie("item") == "") {
-            arrayToCookie("item", [id]);
-            arrayToCookie("count", [count]);
-            arrayToCookie("total", [price]);
-        }
-        // Read content, type array
-        else {
-            var item_cookie = cookieToArray("item");
-            var count_cookie = cookieToArray("count");
-            var total_cookie = cookieToArray("total");
-
-            total_cookie[0] = total_cookie[0] + price;
-
-            var i = item_cookie.indexOf(id);
-            if (i != -1) {
-                count_cookie[i] = count_cookie[i] + count;
-            }
-            else {
-                item_cookie.push(id);
-                count_cookie.push(count);
-            }
-            arrayToCookie("item", item_cookie);
-            arrayToCookie("count", count_cookie);
-            arrayToCookie("total", total_cookie);
-        }
-        updatePrice();
-    }
+    
 
 
 
