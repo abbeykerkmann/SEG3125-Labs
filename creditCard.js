@@ -4,6 +4,7 @@ var message = "";
 function validateCard() {
 	validateDate();
 	validateCardNumber();
+	return false;
 }
 
 function validateDate() {
@@ -13,49 +14,52 @@ function validateDate() {
 	var monthNum = 0;
 	switch(month) {
 		case "January":
-			monthNum = 1;
+			monthNum = 0;
 			break;
 		case "February":
-			monthNum = 2;
+			monthNum = 1;
 			break;
 		case "March":
-			monthNum = 3;
+			monthNum = 2;
 			break;
 		case "April":
-			monthNum = 4;
+			monthNum = 3;
 			break;
 		case "May":
-			monthNum = 5;
+			monthNum = 4;
 			break;
 		case "June":
-			monthNum = 6;
+			monthNum = 5;
 			break;
 		case "July":
-			monthNum = 7;
+			monthNum = 6;
 			break;
 		case "August":
-			monthNum = 8;
+			monthNum = 7;
 			break;
 		case "September":
-			monthNum = 9;
+			monthNum = 8;
 			break;
 		case "October":
-			monthNum = 10;
+			monthNum = 9;
 			break;
 		case "November":
-			monthNum = 11;
+			monthNum = 10;
 			break;
 		case "December":
-			monthNum = 12;
+			monthNum = 11;
 			break;
 	}
 	if(year < today.getFullYear()) {
 		message = "INVALID YEAR";
 	}
-	else if(year == today.getFullYear() && monthNum < today.getMonth() + 1) {
+	else if(monthNum < today.getMonth()) {
 		message = "INVALID MONTH";
 	}
-	document.getElementById(message).innerHTML = message;
+	else {
+		message = "";
+	}
+	document.getElementById("message").innerHTML = message;
 }
 
 function validateCardNumber() {
