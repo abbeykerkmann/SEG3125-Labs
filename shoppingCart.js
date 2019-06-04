@@ -79,14 +79,48 @@ function addToCart(id, count, price) {
             final_count = count + cookieToArray("count")[i]
         }
     }
-    changeQuantity(id,final_count,price)
+    changeQuantity(id, final_count, price)
 }
 
-function deleteFromCart(id, price) {
+function loadCart() {
+    var list = document.getElementById("list");
+    if (getCookie("item") != "") {
+        var item_cookie = cookieToArray("item");
+        var count_cookie = cookieToArray("count");
+        var result = "<table cellpadding='10'>";
+
+        var to_append = "";
+        for (var i = 0; i < item_cookie.length; i++) {
+            var item_id = item_cookie[i]
+            var curr_item = menu[item_id];
+            var item_name = curr_item["name"];
+            var item_price = curr_item["price"];
+            if (count_cookie[i] != 0) {
+                to_append += "<tr><td>" + item_name + "</td><td>" + item_price + "</td><td>" + count_cookie[i] + "</td><td>" + (count_cookie[i] * item_price).toFixed(2) + "</td><td><button onclick='deleteGoods(" + item_id + "," + item_price + ")'>Remove</button></td></tr>";
+            }
+        }
+        if (to_append != "") {
+            result += "<tr><td><h3>Item</h3></td><td><h3>Price</h3></td><td><h3>Quantity</h3></td><td><h3>Total</h3></td><td></td></tr>";
+            result += to_append;
+        }
+        else {
+            result += "Your cart is empty";
+        }
+        result += "</table>";
+        list.innerHTML = result;
+    }
+    else {
+        list.innerHTML = "Your cart is empty";
+    }
+}
+
+function deleteGoods(id, price) {
     if (getCookie("item") != "") {
         var i = cookieToArray("item").indexOf(id);
         if (i != -1) {
             changeQuantity(id, 0, price);
+            loadCart();
         }
     }
+
 }
