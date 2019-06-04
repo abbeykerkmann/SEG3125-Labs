@@ -107,5 +107,5 @@ function validateCardNumber() {
 			cardType = "INVALID";
 		}
 	}
-	document.getElementById("cardNum").innerHTML = cardType;
+	document.getElementById("cardNu").innerHTML = cardType;
 }
