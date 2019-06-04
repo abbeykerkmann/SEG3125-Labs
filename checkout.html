@@ -5,7 +5,7 @@
     <title>Shopping Cart</title>
     <link rel="icon" href="images/logo.png">
     <link rel="stylesheet" href="style.css">
-    <script src="websiteFucntions.js"></script>
+    <script src="creditCard.js"></script>
 </head>
 
 <body>
@@ -55,7 +55,7 @@
                     <table style="width:500px">
                         <tr style="height:70px">
                             <td>
-                                <form>
+                                <form id = "name">
                                     <label>
                                         <h2 style="font-size: 15px;">Owner</h2>
                                     </label>
@@ -63,7 +63,7 @@
                                 </form>
                             </td>
                             <td>
-                                <form>
+                                <form id = "cvv">
                                     <label>
                                         <h2 style="font-size: 15px;">cvv</h2>
                                     </label>
@@ -73,7 +73,7 @@
                         </tr>
                         <tr style="height:70px">
                             <td>
-                                <form>
+                                <form id = "number">
                                     <label>
                                         <h2 style="font-size: 15px;">Card Number:</h2>
                                     </label>
@@ -81,13 +81,18 @@
                                 </form>
                             </td>
                         </tr>
+                        <p id = "cardNum">
+                            <!--
+                                Add the determined card type
+                            -->
+                        </p>
                         <tr style="height:70px">
                             <td>
                                 <form>
                                     <label>
                                         <h2 style="font-size: 15px;">Expiration Date</h2>
                                     </label>
-                                    <select>
+                                    <select id = "month">
                                         <option value="01">January</option>
                                         <option value="02">February </option>
                                         <option value="03">March</option>
@@ -101,7 +106,7 @@
                                         <option value="11">November</option>
                                         <option value="12">December</option>
                                     </select>
-                                    <select>
+                                    <select id = "year">
                                         <option> 2019</option>
                                         <option> 2020</option>
                                         <option> 2021</option>
@@ -118,6 +123,12 @@
                             </td>
                         </tr>
                     </table>
+                    <p id = "message">
+                        <!--
+                            Insert text that tells the user if credit card information is wrong
+                        -->
+                    </p>
+                    <button onclick = "validateCard()">Submit</button>
                     <br>
                     <hr>
                     <input type="radio"><label style="font-size: 20px;">Cash</label>
